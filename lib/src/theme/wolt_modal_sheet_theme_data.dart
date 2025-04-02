@@ -13,6 +13,7 @@ class WoltModalSheetThemeData extends ThemeExtension<WoltModalSheetThemeData> {
     this.showDragHandle,
     this.dragHandleColor,
     this.dragHandleSize,
+    this.enableCloseDrag,
     this.enableDrag,
     this.topBarShadowColor,
     this.topBarElevation,
@@ -77,6 +78,9 @@ class WoltModalSheetThemeData extends ThemeExtension<WoltModalSheetThemeData> {
 
   /// The size of the drag handle.
   final Size? dragHandleSize;
+
+  /// Controls the ability to close the bottom sheet by dragging.
+  final bool? enableCloseDrag;
 
   /// Whether the bottom sheet can be dragged.
   final bool? enableDrag;

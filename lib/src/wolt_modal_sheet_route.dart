@@ -13,13 +13,15 @@ class WoltModalSheetRoute<T> extends PageRoute<T> {
     this.onModalDismissedWithDrag,
     this.modalBarrierColor,
     WoltModalTypeBuilder? modalTypeBuilder,
+    bool? enableCloseDrag,
     bool? enableDrag,
     bool? showDragHandle,
     bool? useSafeArea,
     bool? barrierDismissible,
     AnimationController? transitionAnimationController,
     RouteSettings? settings,
-  })  : _enableDrag = enableDrag,
+  })  : _enableCloseDrag = enableCloseDrag,
+        _enableDrag = enableDrag,
         _showDragHandle = showDragHandle,
         _useSafeArea = useSafeArea ?? true,
         _transitionAnimationController = transitionAnimationController,
@@ -46,6 +48,8 @@ class WoltModalSheetRoute<T> extends PageRoute<T> {
   final VoidCallback? onModalDismissedWithBarrierTap;
 
   final VoidCallback? onModalDismissedWithDrag;
+
+  final bool? _enableCloseDrag;
 
   final bool? _enableDrag;
 
@@ -100,6 +104,7 @@ class WoltModalSheetRoute<T> extends PageRoute<T> {
       onModalDismissedWithBarrierTap: onModalDismissedWithBarrierTap,
       onModalDismissedWithDrag: onModalDismissedWithDrag,
       transitionAnimationController: animationController,
+      enableCloseDrag: _enableCloseDrag,
       enableDrag: _enableDrag,
       showDragHandle: _showDragHandle,
       useSafeArea: _useSafeArea,

@@ -188,6 +188,10 @@ class SliverWoltModalSheetPage {
   /// `true`.
   final bool? hasSabGradient;
 
+  /// Controls the ability to close the bottom sheet by dragging. This setting overrides the value provided
+  /// via [WoltModalSheet.show] specifically for this page when the modal is displayed as a bottom sheet.
+  final bool? enableCloseDrag;
+
   /// Controls the draggability of the bottom sheet. This setting overrides the value provided
   /// via [WoltModalSheet.show] specifically for this page when the modal is displayed as a bottom sheet.
   final bool? enableDrag;
@@ -237,6 +241,7 @@ class SliverWoltModalSheetPage {
     this.backgroundColor,
     this.surfaceTintColor,
     this.hasSabGradient,
+    this.enableCloseDrag,
     this.enableDrag,
     this.sabGradientColor,
     this.forceMaxHeight = false,
